@@ -1,16 +1,19 @@
 import React from 'react';
 import './App.css';
+import { Login } from './Components/Login';
+import { Signup } from './Components/Signup';
 
 function App() {
-  const [data1, setData1] = React.useState(null);
+  // const [data1, setData1] = React.useState(null);
 
-  fetch('http://localhost:5000')
-    .then((res) => res.json())
-    .then((data) => setData1(data));
+  // fetch('http://localhost:5000')
+  //   .then((res) => res.json())
+  //   .then((data) => setData1(data));
   return (
     <>
       <div className='App'>
-        <h1>{data1 ? data1 : 'Loading...'}</h1>
+        <Login />
+        <Signup />
       </div>
     </>
   );

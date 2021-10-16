@@ -21,14 +21,21 @@ api.get('/', (req, res) => {
 });
 
 api.get('/create', (req, res) => {
-  user.create({ username: 'test', password: 'test2' }, (err, user) =>
-    err ? res.json(err) : res.json(user)
-  );
+  if (req.query) {
+    const user1 = req.query;
+    user.create(user1, (err, user) => (err ? res.json(err) : res.json(user)));
+  } else {
+    res.json('No user query submitted');
+  }
 });
 
 api.get('/login', (req, res) => {
-  const user = req.query;
-  res.json(user);
+  if (req.query) {
+    const user1 = req.query;
+    user.find(user1, (err, user) => (err ? res.json(err) : res.json(user1)));
+  } else {
+    res.json('No user query submitted');
+  }
 });
 
 api.listen(5000, () => console.log('Api listening'));

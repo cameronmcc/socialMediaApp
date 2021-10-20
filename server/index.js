@@ -4,10 +4,10 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const helmet = require('helmet');
 const morgan = require('morgan');
-const userRoute = require('./routes/userRoutes');
+const userRoute = require('./routes/users');
 const authRoute = require('./routes/auth');
 
-require('dotenv').config({ path: './config/.env' });
+dotenv.config();
 
 mongoose.connect(process.env.DB_URI, () => {
   console.log('Connected to MongoDB bay bayyy');

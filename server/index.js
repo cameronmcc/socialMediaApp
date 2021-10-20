@@ -1,41 +1,60 @@
 const express = require('express');
+const app = express();
 const mongoose = require('mongoose');
-const cors = require('cors');
-const api = express();
-const user = require('./models/user');
+const dotenv = require('dotenv');
+const helmet = require('helmet');
+const morgan = require('morgan');
+const userRoute = require('./routes/userRoutes');
+const authRoute = require('./routes/auth');
 
-mongoose.connect(
-  'mongodb+srv://cameronmccloskey:GnNvHp7c3zKtbTk@cluster0.bzmv9.mongodb.net/test',
-  { useNewUrlParser: true, useUnifiedTopology: true }
-);
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error: '));
-db.once('open', () => console.log('Mongodb connected'));
+require('dotenv').config({ path: './config/.env' });
 
-api.use(cors());
-
-api.get('/', (req, res) => {
-  user.find({}, (err, users) => {
-    err ? res.json(err) : res.json(users);
-  });
+mongoose.connect(process.env.DB_URI, () => {
+  console.log('Connected to MongoDB bay bayyy');
 });
 
-api.get('/create', (req, res) => {
-  if (req.query) {
-    const user1 = req.query;
-    user.create(user1, (err, user) => (err ? res.json(err) : res.json(user)));
-  } else {
-    res.json('No user query submitted');
-  }
+app.listen(5000, () => {
+  console.log('Backend server running!');
 });
 
-api.get('/login', (req, res) => {
-  if (req.query) {
-    const user1 = req.query;
-    user.find(user1, (err, user) => (err ? res.json(err) : res.json(user1)));
-  } else {
-    res.json('No user query submitted');
-  }
-});
+// Middleware
 
-api.listen(5000, () => console.log('Api listening'));
+app.use(express.json());
+app.use(helmet());
+app.use(morgan('common'));
+
+app.use('/api/users', userRoute);
+app.use('/api/auth', authRoute);
+
+// Old version code
+
+// const express = require('express');
+// const cors = require('cors');
+// const api = express();
+// const user = require('./models/user');
+// const helmet = require('helmet');
+// const morgan = require('morgan');
+// const userRoutes = require('./routes/userRoutes');
+// const authRoutes = require('./routes/auth');
+// const mongoose = require('mongoose');
+// require('dotenv').config({ path: './config/.env' });
+
+// mongoose.connect(process.env.DB_URI, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+
+// const db = mongoose.connection;
+// db.on('error', console.error.bind(console, 'connection error: '));
+// db.once('open', () => console.log('Mongodb connected'));
+
+// // middleware
+// api.use(cors());
+// api.use('/user', userRoutes);
+// api.use('/auth', authRoutes);
+// api.use(userRoutes);
+// api.use(helmet());
+// api.use(morgan('common'));
+
+// api.use(express.json());
+// api.listen(5000, () => console.log('Api listening'));

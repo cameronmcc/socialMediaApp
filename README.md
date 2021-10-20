@@ -1,0 +1,2 @@
+This app is meant to set out a bit more beefy Full Stack functionality. This app will have a RESTful API built to allow users to Login/Register (with custom validation)into their account, upload a profile picture, post to a feed for other users to see, and follow eachother. 
+Technologies used: MERN - Javascript, React, HTML, CSS, MongoDB, Mongoose, Node.js, Axios, Bcrypt, Morgan, Helmet, Dotenv, Nodemon, cors, JSON Web Tokens

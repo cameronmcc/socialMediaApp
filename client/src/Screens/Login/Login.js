@@ -49,7 +49,7 @@ export const Login = () => {
               <button className='form--btn btn'>Start Connecting</button>
             </form>
             <div className='link__container'>
-              <a href='/signup' className='link login--link'>
+              <a href='/signup' className='link form--link'>
                 Don't have an account? sign up here!
               </a>
             </div>

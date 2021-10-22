@@ -60,7 +60,7 @@ export const Signup = () => {
               <button className='form--btn btn'>Start Connecting</button>
             </form>
             <div className='link__container'>
-              <a href='/login' className='link login--link'>
+              <a href='/login' className='link form--link'>
                 Login page
               </a>
             </div>

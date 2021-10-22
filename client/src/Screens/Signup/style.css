@@ -88,7 +88,7 @@
   max-width: 65rem;
 }
 
-.link {
+.form--link {
   margin: 0.8rem 0.8rem 2rem auto;
   padding-right: 2rem;
 }
@@ -107,7 +107,7 @@
     max-width: 65rem;
   }
 
-  .link {
+  .form--link {
     padding-right: 4rem;
     padding-bottom: 3rem;
   }
@@ -167,7 +167,7 @@
     width: 100%;
     max-width: 50rem;
   }
-  .link {
+  .form--link {
     padding-bottom: 2rem;
   }
 

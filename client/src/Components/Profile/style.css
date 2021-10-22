@@ -11,3 +11,30 @@
 .profile__wrapper {
   padding: 2 rem;
 }
+
+.profile--pic {
+  height: 12rem;
+  width: 12rem;
+}
+
+.profile__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+}
+
+.profile--item {
+  padding: 1rem 0;
+}
+
+.profile__middle {
+  padding: 0.75rem;
+  font-size: 2.4rem;
+  color: var(--color-2);
+}
+
+.about--me {
+  font-size: 2rem;
+}

@@ -18,7 +18,7 @@ export const Signup = () => {
   };
   return (
     <>
-      <div className='container signup__container'>
+      <div className='signup__container'>
         <div className='wrapper'>
           <div className='form__column form__left'>
             <h2 className='form--logo'>Connect</h2>

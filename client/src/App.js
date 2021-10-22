@@ -3,8 +3,8 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Login from './Screens/Login/Login';
 import Signup from './Screens/Signup/Signup';
-import Home from './Screens/Home/Home.js';
-import Profile from './Screens/Profile/Profile.js';
+import Home from './Screens/Home/Home';
+import Profile from './Components/Profile/Profile';
 
 function App() {
   // const [data1, setData1] = React.useState(null);

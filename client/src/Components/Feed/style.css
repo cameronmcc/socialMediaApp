@@ -1,0 +1,6 @@
+.feed__wrapper {
+  background-color: var(--color-3);
+  height: 90vh;
+  overflow: scroll;
+  /* padding-bottom: 1rem; */
+}

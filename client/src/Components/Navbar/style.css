@@ -11,6 +11,7 @@
   align-items: center;
   border-radius: var(--bd-radius);
   box-shadow: var(--bx-shdw) 8px 10px 20px 0px;
+  margin: 1rem 0;
 }
 
 .nav__container {

@@ -128,8 +128,9 @@
   .wrapper {
     flex-direction: row;
     aspect-ratio: 16/9;
-    max-width: 1200px;
+    max-width: 120rem;
     min-height: auto;
+    max-height: 67.5rem;
   }
 
   .form--logo {
@@ -175,5 +176,9 @@
     font-size: 2.25rem;
     padding: 1.2rem 1.5rem 1.2rem 5rem;
     margin: 0 3rem;
+  }
+
+  .wrapper .form__container {
+    justify-content: center;
   }
 }

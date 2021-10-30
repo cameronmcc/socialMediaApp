@@ -60,7 +60,10 @@ export const Posts = [
   {
     _id: { $oid: '61732c469e0e3d91f32aef26' },
     userId: '61732b349e0e3d91f32aef1c',
+    username: 'Elon Musk',
+    pic: 'assets/users/1.png',
     desc: 'Just sayin',
+    img: 'assets/posts/1.jpg',
     likes: [],
     createdAt: { $date: '2021-10-22T21:25:26.095Z' },
     updatedAt: { $date: '2021-10-22T21:25:26.095Z' },
@@ -69,7 +72,10 @@ export const Posts = [
   {
     _id: { $oid: '61732c469e0e3d91f32aef26' },
     userId: '61732b349e0e3d91f32aef1c',
+    username: 'Tom Brady',
+    pic: 'assets/users/2.png',
     desc: 'Just sayin',
+    img: 'assets/posts/2.png',
     likes: [],
     createdAt: { $date: '2021-10-22T21:25:26.095Z' },
     updatedAt: { $date: '2021-10-22T21:25:26.095Z' },
@@ -78,7 +84,10 @@ export const Posts = [
   {
     _id: { $oid: '61732c639e0e3d91f32aef28' },
     userId: '61732b4f9e0e3d91f32aef1e',
+    username: 'Jake from State Farm',
+    pic: 'assets/users/3.png',
     desc: 'Me and the Holmester!',
+    img: 'assets/posts/3.jpg',
     likes: [],
     createdAt: { $date: '2021-10-22T21:25:55.455Z' },
     updatedAt: { $date: '2021-10-22T21:25:55.455Z' },

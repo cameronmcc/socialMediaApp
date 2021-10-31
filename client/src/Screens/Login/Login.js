@@ -3,19 +3,18 @@ import './style.css';
 import img1 from '../../img/img1.jpg';
 
 export const Login = () => {
-  const handleLogin = (e) => {
-    e.preventDefault();
-    const username = e.target.username.value;
-    const password = e.target.password.value;
-    fetch(
-      `http://localhost:5000/login?username=${username}&password=${password}`
-    )
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-
-    e.target.username.value = '';
-    e.target.password.value = '';
-  };
+  // const handleLogin = (e) => {
+  //   e.preventDefault();
+  //   const username = e.target.username.value;
+  //   const password = e.target.password.value;
+  //   fetch(
+  //     `http://localhost:5000/login?username=${username}&password=${password}`
+  //   )
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  //   e.target.username.value = '';
+  //   e.target.password.value = '';
+  // };
   return (
     <>
       <div className='container signup__container'>

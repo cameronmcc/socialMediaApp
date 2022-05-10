@@ -1,8 +1,15 @@
 import React from 'react';
 import './style.css';
 import img1 from '../../img/img1.jpg';
+import { loginCall } from '../../ROUTES';
+import { useRef } from 'react/cjs/react.production.min';
 
 export const Login = () => {
+  const email = useRef();
+  const password = useRef();
+  const handleClick = (e) => {
+    e.preventDefault();
+  };
   // const handleLogin = (e) => {
   //   e.preventDefault();
   //   const username = e.target.username.value;
